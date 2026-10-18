@@ -38,6 +38,7 @@ final class MotionSimulator: ObservableObject {
     }
 
     private func tick() {
+        guard AppConfig.simulatedDrive else { return }   // inert in real-GPS mode
         guard let engine else { return }
         switch engine.phase {
         case .running:
