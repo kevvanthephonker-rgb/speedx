@@ -5,8 +5,8 @@ import UIKit
 enum AppConfig {
     /// When true the app runs on a scripted "simulated drive" instead of real
     /// GPS so the readout can be tested indoors (no satellite lock needed).
-    /// Flip to false to use real Core Location hardware.
-    static let simulatedDrive = true
+    /// Keep this FALSE for real use — GPS speedometer, lives on real hardware.
+    static let simulatedDrive = false
 }
 
 /// Shared dial calibration (single source of truth for gauge scaling).
