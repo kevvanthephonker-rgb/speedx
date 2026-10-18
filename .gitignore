@@ -1,0 +1,7 @@
+build/
+.DS_Store
+xcuserdata/
+*.ipa
+*.xcarchive
+.ipynb_checkpoints/
+__pycache__/
