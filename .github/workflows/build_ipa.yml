@@ -1,0 +1,35 @@
+name: Build SpeedX.ipa
+
+# Builds the real Swift app on Apple hardware and packages an (unsigned) .ipa.
+# Download it from this run's Artifacts section, then sign it on Windows with
+# Sideloadly / AltStore and install — see README.md.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: System check
+        run: |
+          xcodebuild -version
+          python3 --version
+
+      - name: Build + package unsigned .ipa
+        run: |
+          chmod +x build_ipa.sh
+          ./build_ipa.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SpeedX-ipa
+          path: build/SpeedX-unsigned.ipa
+          if-no-files-found: error
