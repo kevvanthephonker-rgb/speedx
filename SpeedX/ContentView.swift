@@ -30,7 +30,9 @@ struct ContentView: View {
             .padding(.bottom, 10)
         }
         .onAppear {
-            motion.attach(to: engine)
+            if AppConfig.simulatedDrive {
+                motion.attach(to: engine)
+            }
         }
     }
 
