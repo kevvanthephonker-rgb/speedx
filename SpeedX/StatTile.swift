@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Small labelled card used for Max / Average / Distance / Trip time.struct StatTile: View {
+/// Small labelled card used for Max / Average / Distance / Trip time.
+struct StatTile: View {
     var label: String
     var value: String
     var unit: String?
