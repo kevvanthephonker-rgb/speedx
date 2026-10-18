@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF0000000000000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000001 /* ContentView.swift */; };
+		BF0000000000000000000002 /* MotionSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* MotionSimulator.swift */; };
+		BF0000000000000000000003 /* SpeedometerGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000003 /* SpeedometerGauge.swift */; };
+		BF0000000000000000000004 /* SpeedXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000004 /* SpeedXApp.swift */; };
+		BF0000000000000000000005 /* StatTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000005 /* StatTile.swift */; };
+		BF0000000000000000000006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000006 /* Theme.swift */; };
+		BF0000000000000000000007 /* TripEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000007 /* TripEngine.swift */; };
+		BF0000000000000000000008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR000000000000000000000B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FR0000000000000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FR0000000000000000000002 /* MotionSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSimulator.swift; sourceTree = "<group>"; };
+		FR0000000000000000000003 /* SpeedometerGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometerGauge.swift; sourceTree = "<group>"; };
+		FR0000000000000000000004 /* SpeedXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedXApp.swift; sourceTree = "<group>"; };
+		FR0000000000000000000005 /* StatTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTile.swift; sourceTree = "<group>"; };
+		FR0000000000000000000006 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		FR0000000000000000000007 /* TripEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEngine.swift; sourceTree = "<group>"; };
+		FR000000000000000000000A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FR0000000000000000000009 /* SpeedX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		GR0000000000000000000001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				GR0000000000000000000003 /* SpeedX */,
+				GR0000000000000000000004 /* Resources */,
+				GR0000000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		GR0000000000000000000004 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FR000000000000000000000B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		GR0000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FR0000000000000000000009 /* SpeedX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GR0000000000000000000003 /* SpeedX */ = {
+			isa = PBXGroup;
+			children = (
+				FR000000000000000000000A /* Info.plist */,
+				FR0000000000000000000001 /* ContentView.swift */,
+				FR0000000000000000000002 /* MotionSimulator.swift */,
+				FR0000000000000000000003 /* SpeedometerGauge.swift */,
+				FR0000000000000000000004 /* SpeedXApp.swift */,
+				FR0000000000000000000005 /* StatTile.swift */,
+				FR0000000000000000000006 /* Theme.swift */,
+				FR0000000000000000000007 /* TripEngine.swift */,
+			);
+			path = SpeedX;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		NA0000000000000000000001 /* SpeedX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "SpeedX" */;
+			buildPhases = (
+				SP0000000000000000000001 /* Sources */,
+				RP0000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeedX;
+			packageProductDependencies = (
+			);
+			productName = SpeedX;
+			productReference = FR0000000000000000000009 /* SpeedX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PR0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildMachineOSBuild = 24A335;
+				DevelopmentRegion = en;
+				HasScannedForEncodings = 0;
+				KnownRegions = (
+					en,
+					Base,
+				);
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					NA0000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = CL0000000000000000000001 /* Build configuration list for PBXProject "SpeedX" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = GR0000000000000000000001;
+			productRefGroup = GR0000000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NA0000000000000000000001 /* SpeedX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RP0000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0000000000000000000008 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SP0000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0000000000000000000001 /* ContentView.swift in Sources */,
+				BF0000000000000000000002 /* MotionSimulator.swift in Sources */,
+				BF0000000000000000000003 /* SpeedometerGauge.swift in Sources */,
+				BF0000000000000000000004 /* SpeedXApp.swift in Sources */,
+				BF0000000000000000000005 /* StatTile.swift in Sources */,
+				BF0000000000000000000006 /* Theme.swift in Sources */,
+				BF0000000000000000000007 /* TripEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CB0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CB0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB0000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpeedX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.speedx.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CB0000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpeedX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.speedx.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL0000000000000000000001 /* Build configuration list for PBXProject "SpeedX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB0000000000000000000001 /* Debug */,
+				CB0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL0000000000000000000002 /* Build configuration list for PBXNativeTarget "SpeedX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB0000000000000000000003 /* Debug */,
+				CB0000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PR0000000000000000000001 /* Project object */;
+}
+
