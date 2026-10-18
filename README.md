@@ -11,8 +11,8 @@ Dark, neon-green SwiftUI speedometer for iOS. Real app, real Core Location, no w
 - Start / Pause / Resume / Reset controls with haptics
 - GPS accuracy badge; distance is scaled by a course-cast confidence model so GPS
   jitter cannot inflate the odometer
-- Optional **simulated drive** (`AppConfig.simulatedDrive`, enabled by default) so
-  the app can be exercised indoors / on the iOS Simulator without satellite lock
+- Optional **simulated drive** — `AppConfig.simulatedDrive` in `SpeedX/Theme.swift`.
+  Off by default (real GPS). Set `true` only for indoor testing / the iOS Simulator.
 
 ## Project layout
 
@@ -48,8 +48,8 @@ SpeedX/
 4. On first launch the device asks for location permission — allow it while
    using the app, then step outside for a first GPS fix.
 
-Before shipping, switch OFF the indoor test rig: in `SpeedX/Theme.swift`
-set `AppConfig.simulatedDrive = false` so the dial runs on real GPS.
+The indoor test rig ships **off**. For Simulator sessions without satellites,
+set `AppConfig.simulatedDrive = true` in `SpeedX/Theme.swift` (rebuild required).
 
 ### Building the .ipa (macOS or CI)
 
