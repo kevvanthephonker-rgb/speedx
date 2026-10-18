@@ -52,32 +52,31 @@ final class MotionSimulator: ObservableObject {
 
     // MARK: Script
 
-    /// The staged drive: (start, end, fromSec, toSec) segments, held-speed between.
+    /// Staged drive schedule: standing start, city crawl, open-road surge,
+    /// clearway pass, and a final stop — then it loops.
     private func scriptedSpeed(at t: TimeInterval) -> Double {
-        let seg: (Double, Double, Double, Double) = { start, end, from, to in
-            guard t >= from else { return 0 }
-            let progress = min((t - from) / (to - from), 1)
-            let eased = 0.5 - 0.5 * cos(progress * .pi)   // smooth ease-in-out
-            return start + (end - start) * eased
-        }
-        let hold: (Double, Double, Double) = { value, from, to in
-            (t >= from && t < to) ? value : 0
-        }
-        return
-            seg(0, 18, 0, 8) +
-            hold(18, 8, 15) +
-            seg(18, 9, 15, 22) +
-            hold(9, 22, 30) +
-            seg(9, 64, 30, 45) +
-            hold(64, 45, 52) +
-            seg(64, 47, 52, 60) +
-            hold(47, 60, 70) +
-            seg(47, 79, 70, 80) +
-            hold(79, 80, 86) +
-            seg(79, 38, 86, 96) +
-            hold(38, 96, 108) +
-            seg(38, 0, 108, 118) +
-            hold(0, 118, Self.loopLength)
+        let s = t.truncatingRemainder(dividingBy: Self.loopLength)
+        if s < 8  { return ramp(0, 18, s / 8) }
+        if s < 15 { return 18 }
+        if s < 22 { return ramp(18, 9, (s - 15) / 7) }
+        if s < 30 { return 9 }
+        if s < 45 { return ramp(9, 64, (s - 30) / 15) }
+        if s < 52 { return 64 }
+        if s < 60 { return ramp(64, 47, (s - 52) / 8) }
+        if s < 70 { return 47 }
+        if s < 80 { return ramp(47, 79, (s - 70) / 10) }
+        if s < 86 { return 79 }
+        if s < 96 { return ramp(79, 38, (s - 86) / 10) }
+        if s < 108 { return 38 }
+        if s < 118 { return ramp(38, 0, (s - 108) / 10) }
+        return 0
+    }
+
+    /// Smooth ease-in-out transition between two speeds over a 0…1 progress span.
+    private func ramp(_ from: Double, _ to: Double, _ rawProgress: Double) -> Double {
+        let p = max(0, min(rawProgress, 1))
+        let eased = 0.5 - 0.5 * cos(p * Double.pi)
+        return from + (to - from) * eased
     }
 
     // MARK: Fix generation
